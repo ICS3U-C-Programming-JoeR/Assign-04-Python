@@ -1,0 +1,28 @@
+def main():
+    print("HELLO! I will calculate the sum of the numbers you given me from Odds and Evens!")
+    while True:
+        user_repeat = input("How many integers do you want to enter? ")
+        try:
+            user_repeat = int(user_repeat)
+        except ValueError:
+            print("Please enter a valid number.")
+        else:
+            odd_sum = 0
+            even_sum = 0
+            for count in range(user_repeat+1):
+                user_num = input("Enter an integer: ")
+            try:
+                user_num = int(user_num)
+            except ValueError:
+                         print(f"{user_num} is not an integer. ", end="")
+            else:
+                        if user_num % 2 == 0:
+                          even_sum += user_num
+                        else:
+                            odd_sum += user_num
+                        break
+                        print(f"The sum of the even integers is: {even_sum}")
+                        print(f"The sum of the odd integers is: {odd_sum}")
+
+if __name__ == "__main__":
+    main()
